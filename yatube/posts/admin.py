@@ -1,8 +1,9 @@
 from django.contrib import admin
 
-from .models import Post, Group
+from .models import Group, Post
 
 
+@admin.register(Post)
 class PostAdmin(admin.ModelAdmin):
     list_display = (
         'pk',
@@ -17,14 +18,9 @@ class PostAdmin(admin.ModelAdmin):
     empty_value_display = '-пусто-'
 
 
+@admin.register(Group)
 class GroupAdmin(admin.ModelAdmin):
     list_display = ('pk', 'title', 'slug', 'description',)
     list_editable = ('description',)
     search_fields = ('title',)
     eempty_value_display = '-пусто-'
-
-
-# При регистрации модели Post источником конфигурации для неё назначаем
-# класс PostAdmin
-admin.site.register(Post, PostAdmin)
-admin.site.register(Group, GroupAdmin)
