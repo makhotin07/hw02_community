@@ -1,8 +1,6 @@
 # backend_community_homework - Спринт №3 в Яндекс.Практикум
 
-<div align="center">
-  <img src="https://image.flaticon.com/icons/png/512/2581/2581809.png" width="150" height="150"/>
-</div>
+
 
 <p align="center"><i>Социальная сеть для общения и публикации постов</i></p>
 
